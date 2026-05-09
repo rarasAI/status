@@ -1,0 +1,82 @@
+owner: rarasAI
+repo: status
+
+sites:
+  - name: Raras (site)
+    url: https://raras.org
+  - name: API Assistente
+    url: https://raras.org/api/health
+    method: GET
+    expectedStatusCodes:
+      - 200
+      - 404
+  - name: Cloud Run (raras-app)
+    url: https://raras-app-669720154102.southamerica-east1.run.app/
+
+status-website:
+  baseUrl: /status
+  logoUrl: https://raras.org/logo-raras-rodape.png
+  name: Status Raras
+  introTitle: "**Status Raras** — uptime e incidentes da plataforma raras.org."
+  introMessage: Esta página é atualizada automaticamente a cada 5 minutos via GitHub Actions. Histórico de incidentes e janelas de manutenção ficam registrados como issues no [repositório](https://github.com/rarasAI/status).
+  navbar:
+    - title: Status
+      href: /
+    - title: raras.org
+      href: https://raras.org
+    - title: GitHub
+      href: https://github.com/rarasAI/status
+
+assignees:
+  - dimas-timmers
+
+i18n:
+  activeIncidents: Incidentes ativos
+  allSystemsOperational: Todos os sistemas operacionais
+  incidentReport: "Reporte: "
+  incidentReportOn: "em "
+  incidentMaintenanceOn: "Manutenção em "
+  incidentSummaryFirst: "Nos últimos "
+  incidentSummaryLast: " dias, "
+  incidentSummaryNoneSingular: "houve **1 incidente** sem manutenção programada."
+  incidentSummaryNonePlural: "houve **$NUMBER_INCIDENTS incidentes** sem manutenção programada."
+  incidentSummaryOneSingular: "houve **1 incidente** e **1 manutenção programada**."
+  incidentSummaryOnePlural: "houve **$NUMBER_INCIDENTS incidentes** e **1 manutenção programada**."
+  incidentSummaryMultipleSingular: "houve **1 incidente** e **$NUMBER_MAINTENANCE_EVENTS manutenções programadas**."
+  incidentSummaryMultiplePlural: "houve **$NUMBER_INCIDENTS incidentes** e **$NUMBER_MAINTENANCE_EVENTS manutenções programadas**."
+  incidentSummaryYearsSingular: "1 ano"
+  incidentSummaryYearsPlural: "$NUMBER_YEARS anos"
+  ongoingIncidents: Incidentes em andamento
+  pastIncidents: Incidentes anteriores
+  resolvedIncidents: Incidentes resolvidos
+  scheduledMaintenance: Manutenção programada
+  upcomingMaintenance: Manutenção programada
+  pastMaintenance: Manutenções anteriores
+  ongoingMaintenance: Manutenção em andamento
+  liveStatus: Ao vivo
+  responseTime: Tempo de resposta
+  uptime: Disponibilidade
+  uptime7: Disponibilidade 7d
+  uptime30: Disponibilidade 30d
+  uptime90: Disponibilidade 90d
+  uptime365: Disponibilidade 1 ano
+  uptimeAll: Disponibilidade total
+  responseTimeDay: Resp. 1d
+  responseTimeWeek: Resp. 1s
+  responseTimeMonth: Resp. 1m
+  responseTimeYear: Resp. 1a
+  ms: ms
+  hours: horas
+  minutes: minutos
+  seconds: segundos
+  days: dias
+  weeks: semanas
+  months: meses
+  years: anos
+  ago: atrás
+  now: agora
+  operational: Operacional
+  downtime: Fora do ar
+  degraded: Degradado
+  partialOutage: Parcialmente fora
+  majorOutage: Fora do ar
